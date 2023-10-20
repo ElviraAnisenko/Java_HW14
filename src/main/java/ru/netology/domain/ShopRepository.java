@@ -5,7 +5,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ShopRepository {
     private Product[] products = new Product[0];
 
-
     private Product[] addToArray(Product[] current, Product product) {
         if (findById(product.getId()) == product) {
             throw new AlreadyExistsException("Element with id: " + product.getId() + " already exists");
